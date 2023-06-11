@@ -16,16 +16,3 @@ spec:
           image: leandrole8/conversao-temperatura:v1
           ports:
           - containerPort: 8080
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: webconversao
-spec:
-  selector:
-    app: webconversao
-  ports:
-    - port: 80
-      targetPort: 8080
-      nodePort: 32000
-  type: NodePort
